@@ -26,6 +26,10 @@
     "eslint-plugin-import": "^2.18.2"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "shortid": "^2.2.15",
+    "valid-url": "^1.0.9"
   }
 }
