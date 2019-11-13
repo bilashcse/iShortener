@@ -1,0 +1,31 @@
+{
+  "name": "ishortener",
+  "version": "0.0.1",
+  "description": "URL shortener",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bilashcse/iShortener.git"
+  },
+  "keywords": [
+    "URL",
+    "shortener"
+  ],
+  "author": "Bilash",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bilashcse/iShortener/issues"
+  },
+  "homepage": "https://github.com/bilashcse/iShortener#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
