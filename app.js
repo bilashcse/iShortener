@@ -5,14 +5,18 @@ const cors = require('cors');
 const validUrl = require('valid-url');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4040;
 
 const { encrypt, decrypt } = require('./utils/security');
 
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  }),
+);
 
 app.get('/:hashId', async (req, res) => {
   const { hashId } = req.params;
@@ -25,7 +29,7 @@ app.get('/:hashId', async (req, res) => {
     }
   } catch (err) {
     console.error(err.message);
-    res.send('Invalid or expired URL');
+    res.send(err.message);
   }
 });
 
@@ -40,8 +44,12 @@ app.post('/', async (req, res) => {
     }
   } catch (err) {
     console.error(err.message);
-    res.send('Invalid URL');
+    res.send(err.message);
   }
+});
+
+app.get('/', async (req, res) => {
+  res.send('Server up & running . . . ');
 });
 
 
