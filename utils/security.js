@@ -22,10 +22,10 @@ const encrypt = async (url) => {
       CREATED_AT = '${moment().format('YYYY-MM-DD HH:mm:ss')}'
     `);
 
-    await con.end();
+    // await con.end();
     return hash;
   } catch (err) {
-    await con.end();
+    // await con.end();
     throw new Error(err);
   }
 };

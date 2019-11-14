@@ -38,7 +38,10 @@ app.post('/', async (req, res) => {
   try {
     if (validUrl.isUri(url)) {
       const hash = await encrypt(url);
-      res.send(`${req.hostname}/${hash}`);
+      res.json({
+        isError: false,
+        url: `${req.hostname}/${hash}`,
+      });
     } else {
       throw new Error('Invalid URL');
     }
@@ -53,4 +56,4 @@ app.get('/', async (req, res) => {
 });
 
 
-app.listen(port, () => console.log(`Server started on localhost:${port}`));
+app.listen(port, () => console.log(`Server started on http://localhost:${port}`));
