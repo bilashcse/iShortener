@@ -28,17 +28,18 @@
     </nav>
 
     <p class="text-center" id="title">Enter any long URL Lets shorten it!</p>
-    <h3 class="text-center" style="display: none; margin-top: 100px;" id="shorten-url-title">Your shorten url</h3>
+    <h2 class="text-center" style="display: none; margin-top: 100px;" id="shorten-url-title">Your short url</h2>
 
     <div class="form-group" style="width: 50%;margin-left: 25%;text-align: -webkit-center;">
         <input class="form-control" type="text" id="shortenURL" placeholder="Enter URL">
         <button class="btn btn-success" type="submit" id="shorten">SHORTEN</button>
-        <div id="display-url" style="font-weight: 700;"></div>
+        <a id="display-url" style="font-weight: 700;" target="_blank"></a>
     </div>
 
 
     <script>
         function shopResponse(newUrl) {
+            document.getElementById("display-url").href = newUrl;
             document.getElementById("display-url").innerHTML = newUrl;
             document.getElementById("shortenURL").style.display = "none";
             document.getElementById("shorten").style.display = "none";
