@@ -1,2 +1,2 @@
 # iShortener
-URL shortener Using NodeJS, Express, MongoDB
+URL shortener Using NodeJS, Express, MySQL
