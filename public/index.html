@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iShortener</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link href="https://bootswatch.com/darkly/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.2.0/css/mdb.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> -->
+                <a class="navbar-brand" href="#">iShortener</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <p class="text-center">Enter any long URL Lets shorten it!</p>
+
+    <div class="form-group" style="width: 50%;margin-left: 25%;text-align: -webkit-center;">
+        <input class="form-control" type="text" id="shortenURL" placeholder="Enter URL">
+        <button class="btn btn-success" type="submit" id="shorten">SHORTEN</button>
+    </div>
+
+
+
+
+
+<!--     <script src="https://code.jquery.com/jquery-3.1.1.js"
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+
+    <script >var longYOURL;
+        $("#shorten").click(function(){
+        var longYOURL = $("#shortenURL").val();
+        $.ajax({
+          url : 'https://www.googleapis.com/urlshortener/v1/url?&key=AIzaSyB28OZnBbdz7b5p9S3Sn6qGL8PgQFQcG3Q',
+          type : 'POST',
+          contentType : 'application/json; charset=utf-8',
+          data :'{longUrl:"'+longYOURL+'" }',
+          success : function(response){
+            console.log(response["id"]);
+        $("#result").html(response["id"]);
+        bootbox.alert("Shortened URL : <a href ="+response["id"]+" target=_BLANK >"+response["id"]+"</a>");
+          }
+        });
+        });
+        
+        
+        //# sourceURL=pen.js
+        </script> -->
+</body>
+
+</html>

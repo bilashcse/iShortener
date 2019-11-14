@@ -9,7 +9,7 @@ const port = process.env.PORT || 4040;
 
 const { encrypt, decrypt } = require('./utils/security');
 
-
+app.use(express.static('public'));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(
@@ -49,8 +49,8 @@ app.post('/', async (req, res) => {
 });
 
 app.get('/', async (req, res) => {
-  res.send('Server up & running . . . ');
+  res.sendFile(`${__dirname}/index.html`);
 });
 
 
-app.listen(port, () => console.log(`Server started on ${port}`));
+app.listen(port, () => console.log(`Server started on localhost:${port}`));
